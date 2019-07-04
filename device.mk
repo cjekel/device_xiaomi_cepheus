@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc \
+    init.mi_thermald.rc \
     fstab.qcom
 
 # IR
@@ -147,3 +148,7 @@ PRODUCT_BOOT_JARS += \
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
+
+# ThermalController app
+PRODUCT_PACKAGES += \
+    ThermalController
