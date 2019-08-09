@@ -6,7 +6,6 @@ on init
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
 
-<<<<<<< HEAD
     # Boot time FS tune
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sda/queue/scheduler cfq
@@ -64,8 +63,3 @@ on property:sys.boot_completed=1
     write /sys/block/dm-1/queue/read_ahead_kb 128
     write /sys/block/dm-2/queue/read_ahead_kb 128
     write /sys/block/dm-3/queue/read_ahead_kb 128
-=======
-on property:sys.boot_completed=1
-    # Set idle GPU to 257 Mhz
-    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
->>>>>>> 0d126672b3fccd59282aafa322ae7fcb5ee3ec1d

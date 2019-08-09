@@ -71,13 +71,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus
-
-PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
@@ -90,7 +83,6 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc \
-    init.mi_thermald.rc \
     fstab.qcom
 
 # IR
@@ -106,10 +98,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_msmnile
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml \
@@ -121,21 +109,9 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
-    com.nxp.nfc.nq \
-    NQNfcNci \
-    Tag
-
-PRODUCT_PACKAGES += \
-    vendor.nxp.hardware.nfc@1.1-service
-
-PRODUCT_PACKAGES += \
-    nfc_nci.nqx.default.hw
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+    NfcNci \
+    Tag \
+    com.android.nfc_extras
 
 # Power
 PRODUCT_PACKAGES += \
@@ -171,7 +147,3 @@ PRODUCT_BOOT_JARS += \
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
-
-# ThermalController app
-PRODUCT_PACKAGES += \
-    ThermalController
