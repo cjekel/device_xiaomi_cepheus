@@ -1,11 +1,7 @@
 type bt_firmware_file, file_type;
 type firmware_file, file_type;
-<<<<<<< HEAD
 type persist_file, file_type;
 type sysfs_battery_supply, sysfs_type, fs_type;
 type sysfs_graphics, sysfs_type, fs_type;
-=======
-type sysfs_battery_supply, sysfs_type, fs_type;
->>>>>>> 0d126672b3fccd59282aafa322ae7fcb5ee3ec1d
 type sysfs_usb_supply, sysfs_type, fs_type;
 type sysfs_white_led, sysfs_type, fs_type;
