@@ -15,11 +15,6 @@
 -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-<<<<<<< HEAD
-    <item android:color="#ff80868B" android:state_activated="false" />
-    <item android:color="?android:attr/colorAccent" android:state_activated="true" />
-=======
     <item android:color="#333333" android:state_activated="false" />
     <item android:color="@*android:color/custom_accent_color" android:state_activated="true" />
->>>>>>> 0d126672b3fccd59282aafa322ae7fcb5ee3ec1d
 </selector>
