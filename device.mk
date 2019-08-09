@@ -119,6 +119,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    com.gsma.services.nfc \
+    com.nxp.nfc.nq \
+    NQNfcNci \
+    Tag
+
+PRODUCT_PACKAGES += \
+    vendor.nxp.hardware.nfc@1.1-service
+
+PRODUCT_PACKAGES += \
+    nfc_nci.nqx.default.hw
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
